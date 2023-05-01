@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>setInterval() 메서드는 코드를 일정시간간격으로 반복 실행하는것</p>
+    <p>clearInterval() 메서드는 setInterval()메서드를 취소하는것</p>
+
+    <p>var intv = setInterval(function(){i++;},3000);</p>
+    <p>3(3000)초간격으로 변수 i의 값을 1씩 증가시킴</p>
+    <p>clearInterval(intv)</p>
+    <p>setInterval를 정지시킴</p>
+    
+    <h1>일정 시간 간격으로 값 증감시키기</h1>
+    <p> 콘솔 패널을 열어 확인하세요.</p>
+   <button onclick="clearInterval(auto_1)">증가 정지</button>
+   <button onclick="clearInterval(auto_2)">감소 정지</button>
+
+   <script>
+        var addNum=0;
+        var subNum=1000;
+
+        var auto_1=setInterval(function(){
+            addNum++;
+            console.log("addNum: "+addNum);
+        },3000)
+
+        var auto_2=setInterval(function(){
+            subNum--;
+            console.log("subNum: "+subNum);
+        },3000)
+   </script>
+</body>
+</html>
