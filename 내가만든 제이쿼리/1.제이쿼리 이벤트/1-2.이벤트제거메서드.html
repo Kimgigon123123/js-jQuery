@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>이벤트 제거하는 메서드는 off()이다.</p>
+    <div class="btn_wrap"><button class="b1">버튼1</button></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(function(){
+            $(".b1").click(function(){
+                $(this).css({"color":"red"}); //버튼을 눌러야 색깔이 변함
+            })
+          $(".b1").off("click") // 버튼1에 등록된 클릭 이벤트를 제거.
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="rel_site">
+        <option value="">사이트 선택</option>
+        <option value="google">구글</option>
+        <option value="naver">네이버</option>
+        <option value="daum">다음</option>
+    </select>
+    <p class="txt"></p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(function(){
+            $("#rel_site").change(function(){ //셀렉트의 value값이 바뀌면
+                $(".txt").text($(this).val()); //.txt의 텍스트를 rel_site의 value값으로 나타낸다.
+            })
+        })
+    </script>
+</body>
+</html>

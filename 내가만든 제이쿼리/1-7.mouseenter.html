@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="bt1">버튼1</button>
+    <br>
+    <button class="bt2">버튼2</button>
+    <p class="txt"></p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(function(){
+            $(".bt1").mouseenter(function(){
+                $(".txt").text("javascript")
+            })
+            $(".bt1").mouseleave(function(){
+                $(".txt").text("")
+            })
+            $(".bt2").mouseenter(enterFuc);
+            $(".bt2").mouseleave(leaveFuc);
+
+            function enterFuc(){
+                $(".txt").text("어서오고");
+            }
+            function leaveFuc(){
+                $(".txt").text("");
+            }
+
+        })
+    </script>
+</body>
+</html>

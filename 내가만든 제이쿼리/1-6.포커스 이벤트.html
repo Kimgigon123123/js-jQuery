@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <label class="id">ID</label>
+    <input type="text" class="id_txt">
+    <br>
+    <label class="pw">PW</label>
+    <input type="text" class="pw_txt">
+
+    
+    <div class="wrap">
+        <label class="id2">ID</label>
+        <input type="text" class="id_txt2">
+        <br>
+        <label class="pw2">PW</label>
+        <input type="text" class="pw_txt2">
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(function(){
+            $(".id_txt, .pw_txt").focus(function(){   //focus: 포커스 될때
+                $(this).css({"background-color":"gray"})
+            }).blur(function(){    // blur: 포커스에서 나갈때
+                $(this).css({"background-color":"white"})
+            })
+        })
+
+        $(".id_txt2, .pw_txt2").focus(function(){   //focus: 포커스 될때
+                $(".wrap").css({"background-color":"gray"})
+            }).blur(function(){    // blur: 포커스에서 나갈때
+                $(".wrap").css({"background-color":"white"})
+            })
+
+    </script>
+</body>
+</html>
